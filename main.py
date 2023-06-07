@@ -10,19 +10,19 @@ import joblib
 
 app = Flask(__name__)
 
-json_file = open('/Users/dimasws/Downloads/cnnlstmmodel001.json', 'r')
+json_file = open('./assets/cnnlstmmodel001.json', 'r')
 loaded_model_json = json_file.read()
 json_file.close()
 loaded_model = model_from_json(loaded_model_json)
 # load weights into new modela
-loaded_model.load_weights("/Users/dimasws/Downloads/cnnlstmmodel001.h5")
+loaded_model.load_weights("./assets/cnnlstmmodel001.h5")
 # print("Loaded model from disk")
 
 #loading our scaler
-scaler = joblib.load('/Users/dimasws/Downloads/scaler.joblib')
+scaler = joblib.load('./assets/scaler.joblib')
 
 #loading our encoder
-encoder= joblib.load('/Users/dimasws/Downloads/encoder.joblib')
+encoder= joblib.load('./assets/encoder.joblib')
 # print('load scaler encoder done')
 
 def extract_features(data, sample_rate):
