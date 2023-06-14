@@ -3,7 +3,9 @@ Bangkit 2023 Product-based Capstone
 
 Team ID: C23-PS163
 (ML) M169DKY4215 – Ade Puspaning Ayu Umbaran Putri – Universitas Gadjah Mada
+
 (ML) M040DSX1471 – Dimas Wahyu Saputro – Institut Teknologi Sumatera
+
 (ML) M353DSY3615 – Nur Ulfah Atiqah – Universitas Syiah Kuala
 
 # Data Engineering
