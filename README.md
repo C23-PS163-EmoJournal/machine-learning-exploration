@@ -7,20 +7,16 @@ Team ID: C23-PS163
 (ML) M353DSY3615 – Nur Ulfah Atiqah – Universitas Syiah Kuala
 
 # Data Engineering
-## Dataset yang digunakan
+## Dataset Used
 Dataset yang digunakan pada project ini adalah,
-1. RAVDESS (Ryerson Audio-Visual Database of Emotional Speech and Song)
-We had to play it 3 or 4 times to finally be convienced that it is indeed a happy sound. 
-2. TESS (Toronto emotional speech set)
-Notice the amplitute is pretty high too on a few data points? We saw that on the RAVDESS dataset too. We will have to normalize the data later.
-3. CREMA-D (Crowd-sourced Emotional Multimodal Actors Dataset)
-I noticed with this CREMA-D dataset is that its is highly varied in its quality. Some are crisp clear and some are really muffled or echoey. Also there's lots of silence as well.
-4. SAVEE (Surrey Audio-Visual Expressed Emotion)
-Good quality audio. We can see that the wave form is distinctively different from the fear one. So that's good for our model. I did notice that there's a very short silence period between start and end. We could potentially trim it later to enhance the quality.
+1. RAVDESS (Ryerson Audio-Visual Database of Emotional Speech and Song): This dataset contains audio and visual recordings of individuals expressing emotional speech and singing. During the analysis, we observed that some sound samples required multiple plays to confirm the intended emotion, such as the "happy" sound.
+2. TESS (Toronto emotional speech set): This dataset consists of audio recordings of emotional speech. It was noticed that some data points had high amplitude, similar to what was observed in the RAVDESS dataset. Data normalization will be performed later to address this issue.
+3. CREMA-D (Crowd-sourced Emotional Multimodal Actors Dataset): This dataset includes crowd-sourced audio recordings of individuals expressing various emotions. It was observed that the quality of the recordings in this dataset varied significantly. Some recordings were clear and crisp, while others were muffled or echoed. Additionally, there were instances of significant silence in the recordings.
+4. SAVEE (Surrey Audio-Visual Expressed Emotion): This dataset consists of high-quality audio recordings where individuals express different emotions. The waveform of the audio samples in this dataset is distinctly different for each emotion, which is beneficial for our model. It was also noticed that there is a very short silence period between the start and end of the recordings, which could potentially be trimmed to enhance the audio quality.
 From our analysis, there are some strengths and weaknesses in each dataset. From our analysis, there are some strengths and weaknesses in each dataset. 
 
 ## Join Dataset
-Keempat dataset di atas memiliki banyak jenis emosi yang berbeda-beda, sehingga ketika ingin digunakan dan digabungkan, harus dilakukan preprocessing terlebih dahulu. Ketika dibuat menjadi satu dataset, maka akan terdapat emosi di bawah ini,
+These datasets contain different types of emotions. When combined, the resulting dataset includes the following emotions:
 1. female_angry       1096
 2. female_happy       1096
 3. female_fear        1096
@@ -37,14 +33,14 @@ Keempat dataset di atas memiliki banyak jenis emosi yang berbeda-beda, sehingga 
 14. male_surprise       156
 
 ## Data Augmentation
-Data augmentation dilakukan untuk mengatasi masalah ketidakseimbangan data. Data augmentation yang dilakukan adalah,
+Data augmentation is performed to address the issue of imbalanced data. The following data augmentation techniques are applied:
 1. Noise Injection
 2. Shifting
 3. Stretching
 4. Pitching
 
 ## Feature Extraction
-Feature extraction dilakukan untuk mengubah data menjadi bentuk yang lebih sederhana dan mudah dipahami oleh mesin. Feature extraction yang dilakukan adalah,
+Feature extraction is conducted to transform the data into a simplified form that can be easily understood by the machine. The following feature extraction techniques are employed:
 1. Zero Crossing Rate (ZCR): It measures the rate at which the audio signal changes its sign, which provides information about the frequency content and noisiness of the signal.
 2. Chroma feature based on Short-Time Fourier Transform (Chroma_stft): It represents the 12 different pitch classes in the audio signal and provides information about the harmonic content and tonal characteristics.
 3. Mel-frequency Cepstral Coefficients (MFCC): These coefficients capture the spectral shape of the audio signal by converting the power spectrum of the signal into a perceptually meaningful representation. They are commonly used in speech and music recognition tasks.
@@ -52,8 +48,8 @@ Feature extraction dilakukan untuk mengubah data menjadi bentuk yang lebih seder
 5. Mel Spectrogram: It represents the power spectral density of the audio signal in mel-scale, which emphasizes frequencies important for human perception. It provides information about the spectral content of the audio.
 
 # Machine Learning Model
-1. LSTM
-2. Conv1D-LSTM
+1. LSTM (Long Short-Term Memory)
+2. Conv1D-LSTM (Convolutional 1D Long Short-Term Memory)
 
 # Model Architecture
 add image files
